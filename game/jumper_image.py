@@ -15,7 +15,7 @@ class Jumper_image:
     print("         ")
     print("^^^^^^^^^")
 
-    if incorrect == 0:
+    if incorrect <= 0:
         print("   ___   ")
         print("  /___\  ")
         print("  \   /  ")
@@ -66,3 +66,5 @@ class Jumper_image:
         print("   / \   ")
         print("         ")
         print("^^^^^^^^^")
+        exit()
+
