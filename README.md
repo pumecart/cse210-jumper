@@ -2,11 +2,11 @@
 # Jumper
 Help to save this Jumper's life!!!
 Jumper is a game in which you seek to solve a puzzle by guessing the letters of a secret word one at a time.  
-You get five guesses before the the game ends.
-With each correct guess, a letter will appear and the Jumper's parachute will be spared.
-However, make an incorrect guess and one piece of the Jumper's parachute disappears!!!
-Can you guess correctly and save the Jumper from losing his parachute?
-Come and play Jumper and find out! 
+With each correct guess, a letter will appear and the Jumper's parachute will be spared.  Enough correct guesses will reveal the secret word and solve the puzzle!
+However, make an incorrect guess and one piece of the Jumper's parachute disappears.  
+After 5 incorrect guesses the Jumper will lose his entire parachute along with his life!!!
+Can you guess correctly and keep the Jumper safe?
+Play Jumper and find out! 
 
 # Getting started
 ---
