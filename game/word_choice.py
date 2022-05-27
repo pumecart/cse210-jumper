@@ -1,10 +1,12 @@
+from terminal_service import TerminalService
 import random
 
 
 class Word:
   def __init__(self):
     self._word_list = []
-    self._index = -2
+    self._letter_list = []
+    self._TerminalService = TerminalService()
     
   def get_word(self):    
     self.readFile = "words.txt"
@@ -21,22 +23,51 @@ class Word:
 
   # Set letter position
   def get_spaces(self, _special_word):
-    self.spaces = "_"*len(_special_word)
-    print(self.spaces)
 
-  def get_letter_position(self, _special_word, _index):
-    while _index != -1:
+    for i in range(len(_special_word)):
+      self._letter_list[i] = self._letter_list.append('_')
+
+  def get_letter_guess(self):
+    guess = self._TerminalService.read_letter("What is your guess: ")
+    return guess
+
+  def get_letter_position(self, _special_word, guess):
+    
     # Set Blank Letters
-      guess = input("What is your guess: ")
+    
       # i = special_word.index(guess)
-      for i in range(len(_special_word)):
-        if guess == _special_word[i]:
-          # replace each index with the matching guess letter in special_word.
-          # spaces[0:1] leaves "_" before the special_word[i]
-          # spaces[i+1:] leaves "_" after the special_word[i]
-          self.spaces = self.spaces[0:i] + guess + self.spaces[i+1:]
-      # print(display)
-          print(self.spaces)
+    for i in range(len(_special_word)):
+      if guess == _special_word[i]:
+        # replace each index with the matching guess letter in special_word.
+        # spaces[0:1] leaves "_" before the special_word[i]
+        # spaces[i+1:] leaves "_" after the special_word[i]
+        return i
+      
+  def set_letter_position(self, i, guess):
+    self._letter_list[i] = guess
+    
+    print(self._letter_list)
+
+  def incorrect_guess(self, _special_word, guess):
+    value = 0
+
+    for i in range(len(_special_word)):
+      if guess != _special_word[i]:
+        value += 1
+        if value == 8:
+          return 1
+      else:
+        return 0
+
+  def guessed_word(self, _special_word):
+    value = 0
+    for i in range(len(_special_word)):
+      if _special_word[i] == self._letter_list[i]:
+        value += 1
+        if value == 8:
+          return True
+
+
         
 
       
