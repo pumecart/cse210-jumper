@@ -2,20 +2,43 @@ from terminal_service import TerminalService
 import random
 
 
+
 class Word:
   def __init__(self):
-    self._word_list = []
+    self._word_list = ["absolute",
+                      "abstract",
+                      "building",
+                      "bulletin",
+                      "business",
+                      "calendar",
+                      "campaign",
+                      "victoria",
+                      "violence",
+                      "volatile",
+                      "warranty",
+                      "weakness",
+                      "weighted",
+                      "whatever",
+                      "whenever",
+                      "wherever",
+                      "wildlife",
+                      "wireless",
+                      "withdraw",
+                      "woodland",
+                      "workshop",
+                      "yourself"
+                      ]
     self._letter_list = []
     self._TerminalService = TerminalService()
     
   def get_word(self):    
-    self.readFile = "words.txt"
-    # Word bank
-    with open("words.txt") as word_lists:
-      for word in word_lists:
-        word = word.strip()
-        # print(word)
-        self._word_list.append(word)
+    # self.readFile = "words.txt"
+    # # Word bank
+    # with open("words.txt") as word_lists:
+    #   for word in word_lists:
+    #     word = word.strip()
+    #     # print(word)
+    #     self._word_list.append(word)
       # print(word_list)
     #Chooses words
     self._special_word = random.choice(self._word_list)

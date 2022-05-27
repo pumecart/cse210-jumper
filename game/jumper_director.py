@@ -8,7 +8,7 @@ class Director:
         self._TerminalService = TerminalService()
         self._Word = Word()
         self._JumperImage = Jumper_image()
-        self._Goal = Word.get_word()
+        self._Goal = Word.get_word(self)
         Word.get_spaces(self._Goal)
         Jumper_image.print_jumper(0)
         self._guess = ""
@@ -40,4 +40,9 @@ class Director:
     def _do_outputs(self):
         self._Word.set_letter_position(self._letter_position, self._guess)
         self._JumperImage.print_jumper(self._incorrect)
+        if self._incorrect == 5:
+            self._TerminalService.write_text("Sorry, you're parachute disappeared and the Jumper has died.  Thanks for killing him.")
+        self._win = self._Word.guessed_word(self._Goal)
+        if self._win == True:
+            self._TerminalService.write_text(f"Congratulations!!! You guessed {self._Goal} correctly!!!  Thanks for keeping the Jumper alive!!!")
         
