@@ -1,6 +1,6 @@
-from terminal_service import TerminalService
-from word_choice import Word
-from jumper_image import Jumper_image
+from game.terminal_service import TerminalService
+from game.word_choice import Word
+from game.jumper_image import Jumper_image
 
 class Director:
     def __init__(self):
