@@ -54,13 +54,4 @@ class Jumper_image:
         print("   / \   ")
         print("         ")
         print("^^^^^^^^^")
-<<<<<<< HEAD
         
-=======
-        
-
-
-
-#Alexander
-
->>>>>>> 79d8c37b91b3d465eb30133296e0f761a4f26653
