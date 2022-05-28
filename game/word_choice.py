@@ -5,20 +5,6 @@ import random
 
 class Word:
   def __init__(self):
-<<<<<<< HEAD
-    self._word_list = []
-    self._index = -2
-    self.guess = ""
-    
-  def get_word(self):    
-    readFile = "game/words.txt"
-    # Word bank
-    with open(readFile) as word_lists:
-      for word in word_lists:
-        word = word.strip()
-        # print(word)
-        self._word_list.append(word)
-=======
     self._word_list = ["absolute",
                       "abstract",
                       "building",
@@ -53,7 +39,6 @@ class Word:
     #     word = word.strip()
     #     # print(word)
     #     self._word_list.append(word)
->>>>>>> 79d8c37b91b3d465eb30133296e0f761a4f26653
       # print(word_list)
     #Chooses words
     self._special_word = random.choice(self._word_list)
