@@ -14,23 +14,12 @@ class Director:
         self._TerminalService = TerminalService()
         self._Word = Word()
         self._JumperImage = Jumper_image()
-<<<<<<< HEAD
-        self._Goal = self._Word.get_word()
-        self._Word.get_spaces(self._Goal)
-        self._incorrect = 0
-        self._JumperImage.print_jumper(0)
-        self._guess = ""
-        self._index = -2
-        # self._letter_position = 0
-        
-=======
         self._Goal = Word.get_word(self)
         Word.get_spaces(self._Goal)
         Jumper_image.print_jumper(0)
         self._guess = ""
         self._letter_position = 0
         self._incorrect = 0
->>>>>>> 79d8c37b91b3d465eb30133296e0f761a4f26653
         self._win = False
     
 
