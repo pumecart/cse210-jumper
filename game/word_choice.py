@@ -7,8 +7,8 @@ class Word:
     self._index = -2
     self.guess = ""
     
-  def get_word(self, readFile):    
-    readFile = "C:/Users/mitch/Desktop/BYUI/Programming with Classes/Week 5 Team/cse210-jumper/game/words.txt"
+  def get_word(self):    
+    readFile = "game/words.txt"
     # Word bank
     with open(readFile) as word_lists:
       for word in word_lists:

@@ -21,7 +21,7 @@ def get_letter_position(guess, word, spaces):
   #Create and set index to be -2
   index = -2
   while index != -1:
-    #Check if the character or quess is in word, if it is then remove the character from the word and add it to spaces
+    #Check if the character or guess is in word, if it is then remove the character from the word and add it to spaces
     if guess in word:
       index = word.find(guess)
       #Remove that letter from the word
