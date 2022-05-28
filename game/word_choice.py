@@ -1,4 +1,4 @@
-import random
+import random, os, sys
 from terminal_service import TerminalService
 
 class Word:
@@ -10,9 +10,8 @@ class Word:
     self._TerminalService = TerminalService()
     
   def get_word(self):    
-    readFile = "game/words.txt"
     # Word bank
-    with open(readFile) as word_lists:
+    with open(os.path.join(sys.path[0], "words.txt"), "r") as word_lists:
       for word in word_lists:
         word = word.strip()
         self._word_list.append(word)
